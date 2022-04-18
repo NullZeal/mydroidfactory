@@ -9,6 +9,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Audio\MainMenu.wav" />
+    <None Remove="Gifs\Droid.gif" />
+    <None Remove="Gifs\loading.gif" />
+    <None Remove="Gifs\loading2.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Audio\MainMenu.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Gifs\Droid.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Gifs\loading.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Gifs\loading2.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.1150.38" />
   </ItemGroup>
 
