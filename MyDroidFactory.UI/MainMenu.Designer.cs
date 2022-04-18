@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.btnExit = new System.Windows.Forms.Button();
             this.timerAlarm = new System.Windows.Forms.Timer(this.components);
             this.wvDroidArmyVideo = new Microsoft.Web.WebView2.WinForms.WebView2();
@@ -297,7 +298,7 @@
             // 
             // pbLoading
             // 
-            this.pbLoading.Image = global::MyDroidFactory.UI.Properties.Resources.loading2;
+            this.pbLoading.Image = ((System.Drawing.Image)(resources.GetObject("pbLoading.Image")));
             this.pbLoading.Location = new System.Drawing.Point(34, 223);
             this.pbLoading.Name = "pbLoading";
             this.pbLoading.Size = new System.Drawing.Size(501, 325);

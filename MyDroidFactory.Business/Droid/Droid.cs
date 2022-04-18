@@ -81,7 +81,8 @@ public abstract class Droid
         EEquipment equipment1,
         EEquipment equipment2,
         EEquipment equipment3,
-        EEquipment equipment4) : this(id, model, manufacturer, height, mass, equipment1, equipment2, equipment3)
+        EEquipment equipment4) 
+        : this(id, model, manufacturer, height, mass, equipment1, equipment2, equipment3)
     {
         Equipment4 = equipment4;
     }
