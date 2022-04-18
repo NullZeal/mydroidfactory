@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MyDroidFactory.Business.Droid">
+    <Position X="0.5" Y="0.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAgCIACEBwCAAAQAAgBEAAEQBAIAIAAAABgAAECBAQI=</HashCode>
+      <FileName>Droid\Droid.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyDroidFactory.Business.BattleDroid">
+    <Position X="4.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAIAAAAAAAAAAAAAAAAAEgDAAA=</HashCode>
+      <FileName>Droid\Battle\BattleDroid.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyDroidFactory.Business.AssassinDroid">
+    <Position X="6.75" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Droid\Battle\AssassinDroid.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyDroidFactory.Business.AstroMechDroid">
+    <Position X="4.5" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAYAAAAAAAAAAAIAAAAAAAAAAAAAAEIAEAAAAA=</HashCode>
+      <FileName>Droid\Other\AstroMechDroid.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
