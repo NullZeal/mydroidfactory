@@ -54,7 +54,8 @@ public abstract class Droid
         float height,
         float mass,
         EEquipment equipment1,
-        EEquipment equipment2) : this(id, model, manufacturer, height, mass, equipment1)
+        EEquipment equipment2) 
+        : this(id, model, manufacturer, height, mass, equipment1)
     {
         Equipment2 = equipment2;
     }
@@ -67,7 +68,8 @@ public abstract class Droid
         float mass,
         EEquipment equipment1,
         EEquipment equipment2,
-        EEquipment equipment3) : this(id, model, manufacturer, height, mass, equipment1, equipment2)
+        EEquipment equipment3) 
+        : this(id, model, manufacturer, height, mass, equipment1, equipment2)
     {
         Equipment3 = equipment3;
     }
