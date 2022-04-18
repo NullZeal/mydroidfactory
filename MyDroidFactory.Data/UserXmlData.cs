@@ -1,47 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MyDroidFactory.Business;
+﻿using MyDroidFactory.Business;
 using System.Xml.Serialization;
 
-namespace MyDroidFactory.Data
+namespace MyDroidFactory.Data;
+
+public static class UserXmlData
 {
-    public static class UserXmlData
+    private static string GetFilePath()
     {
-        private static string GetFilePath()
+        return AppDomain.CurrentDomain.BaseDirectory + "user.xml";
+    }
+
+    public static List<User> GetUserList()
+    {
+        string filePath = GetFilePath();
+        if (!File.Exists(filePath))
         {
-            return AppDomain.CurrentDomain.BaseDirectory + "user.xml";
+            return new List<User>();
         }
 
-        public static List<User> GetUserList()
+        string fileContent = File.ReadAllText(filePath);
+        if (fileContent == "")
+            return new List<User>();
+
+        using (var reader = new StringReader(fileContent))
         {
-            string filePath = GetFilePath();
-            if (!File.Exists(filePath))
-            {
-                return new List<User>();
-            }
-
-            string fileContent = File.ReadAllText(filePath);
-            if (fileContent == "")
-                return new List<User>();
-
-            using (var reader = new StringReader(fileContent))
-            {
-                var serializer = new XmlSerializer(typeof(List<User>));
-                return (List<User>)serializer.Deserialize(reader)!;
-            }
+            var serializer = new XmlSerializer(typeof(List<User>));
+            return (List<User>)serializer.Deserialize(reader)!;
         }
+    }
 
-        public static void SaveUserList(List<User> list)
+    public static void SaveUserList(List<User> list)
+    {
+        string filePath = GetFilePath();
+        using (var writer = new StreamWriter(filePath))
         {
-            string filePath = GetFilePath();
-            using (var writer = new StreamWriter(filePath))
-            {
-                var serializer = new XmlSerializer(typeof(List<User>));
-                serializer.Serialize(writer, list);
-            }
+            var serializer = new XmlSerializer(typeof(List<User>));
+            serializer.Serialize(writer, list);
         }
     }
 }
