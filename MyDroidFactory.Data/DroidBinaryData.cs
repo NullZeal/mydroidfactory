@@ -7,7 +7,7 @@ public static class DroidBinaryData
 {
     private static string GetFilePath()
     {
-        return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Droids.bin");
+        return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "droids.bin");
     }
 
     public static List<Droid> Load()
