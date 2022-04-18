@@ -408,14 +408,16 @@ namespace MyDroidFactory.UI
 
         private void playDroidAudio()
         {
-            SoundPlayer simpleSound = new SoundPlayer(AppDomain.CurrentDomain.BaseDirectory + "MainMenu.wav");
+            var simpleSound = new SoundPlayer(SoundFile);
             simpleSound.Play();
         }
         private void stopDroidAudio()
         {
-            SoundPlayer simpleSound = new SoundPlayer(AppDomain.CurrentDomain.BaseDirectory + "MainMenu.wav");
+            var simpleSound = new SoundPlayer(SoundFile);
             simpleSound.Stop();
         }
+
+        private static string SoundFile => Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Audio", "MainMenu.wav");
 
         private void DroidFactory_FormClosed(object sender, FormClosedEventArgs e)
         {
